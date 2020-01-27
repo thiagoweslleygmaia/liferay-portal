@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="br.com.services.model.Proposta">
+		<field name="id" type="long" />
+		<field name="nome_completo" type="String" />
+		<field name="idade" type="Integer" />
+		<field name="sexo" type="String" />
+	</model>
+</model-hints>

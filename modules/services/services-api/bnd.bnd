@@ -1,0 +1,10 @@
+Bundle-Name: services-api
+Bundle-SymbolicName: br.com.services.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	br.com.services.exception,\
+	br.com.services.model,\
+	br.com.services.service,\
+	br.com.services.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../services-service/service.xml

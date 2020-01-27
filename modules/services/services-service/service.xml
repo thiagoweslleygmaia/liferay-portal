@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="br.com.services" auto-namespace-tables="false">
+    <namespace>Proposta</namespace>
+    <entity name="Proposta" local-service="true" remote-service="false"
+    	table="Proposta">
+    	<!-- PK fields -->
+    	<column name="id" type="long" primary="true"></column>
+    	<!-- Fields -->
+    	<column name="nome_completo" type="String"></column>
+    	<column name="idade" type="Integer"></column>
+    	<column name="sexo" type="String"></column>
+    </entity>
+</service-builder>
