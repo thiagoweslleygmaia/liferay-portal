@@ -2,7 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="br.com.services.model.PlanoProposta" />
 	<import class="br.com.services.model.Proposta" />
+	<class name="br.com.services.model.impl.PlanoPropostaImpl" table="PlanoProposta">
+		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="descricao" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
 	<class name="br.com.services.model.impl.PropostaImpl" table="Proposta">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" column="id_" name="id" type="long">
 			<generator class="assigned" />

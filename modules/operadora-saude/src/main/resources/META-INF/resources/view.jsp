@@ -1,4 +1,4 @@
-<%@ include file="/init.jsp" %>
+<%@ include file="init.jsp" %>
 
 <%@ page import="javax.portlet.RenderResponse"%>
 <%@ page import="javax.portlet.PortletURL"%>
@@ -10,6 +10,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="com.liferay.portal.kernel.util.ListUtil"%>
 <%@ page import="java.util.LinkedList" %>
+
 
 <!DOCTYPE html>
 <html>

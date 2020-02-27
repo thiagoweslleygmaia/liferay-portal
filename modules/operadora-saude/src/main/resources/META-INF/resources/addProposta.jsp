@@ -1,3 +1,5 @@
+<%@page import="br.com.services.service.PlanoPropostaLocalServiceUtil"%>
+<%@page import="br.com.services.model.PlanoProposta"%>
 <%@ include file="/init.jsp" %>
 
 <%@ page import="javax.portlet.RenderResponse"%>
@@ -22,16 +24,18 @@
 
 <portlet:actionURL name="adicionarPlano" var="addPlanoUrl"/>
 
+<%List<PlanoProposta> listaPlano = PlanoPropostaLocalServiceUtil.getPlanoPropostas(0, PlanoPropostaLocalServiceUtil.getPlanoPropostasCount());%>
+<%System.out.println(listaPlano.size()+" Teste"); %>
+
 <aui:form name="formProposta" action="<%= addPlanoUrl %>" method="post">
 <aui:fieldset-group>
 	<aui:fieldset label="Dados do Plano">
 		<aui:row>
 			<aui:col width="50">
-				<aui:select name="plano" label="Plano" required="true">
-				  <aui:option selected="true">Selecione uma opção</aui:option>
-		          <aui:option value="B">Básico</aui:option>
-		          <aui:option value="I">Intermediário</aui:option>
-		          <aui:option value="C">Completo</aui:option>
+				<aui:select id="plano" name="plano" value="plano">
+					<c:forEach var="currOption" items="${listaPlano}">
+				        <aui:option value="${currOption.getDescricao()}" label="${currOption.getDescricao()}"selected="${currOption==selOption?true:false}" />
+		 		    </c:forEach>
 				</aui:select>
 			</aui:col>
 			<aui:col width="50">

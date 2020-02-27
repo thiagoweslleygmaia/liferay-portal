@@ -16,6 +16,7 @@ package br.com.services.service.base;
 
 import br.com.services.model.Proposta;
 import br.com.services.service.PropostaLocalService;
+import br.com.services.service.persistence.PlanoPropostaPersistence;
 import br.com.services.service.persistence.PropostaPersistence;
 
 import com.liferay.portal.aop.AopService;
@@ -377,6 +378,9 @@ public abstract class PropostaLocalServiceBaseImpl
 			throw new SystemException(e);
 		}
 	}
+
+	@Reference
+	protected PlanoPropostaPersistence planoPropostaPersistence;
 
 	protected PropostaLocalService propostaLocalService;
 

@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 
 <model-hints>
+	<model name="br.com.services.model.PlanoProposta">
+		<field name="id" type="long" />
+		<field name="descricao" type="String" />
+	</model>
 	<model name="br.com.services.model.Proposta">
 		<field name="id" type="long" />
 		<field name="nome_completo" type="String" />
